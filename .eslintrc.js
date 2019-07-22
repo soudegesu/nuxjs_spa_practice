@@ -5,7 +5,7 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: '@typescript-eslint/parser'
   },
   extends: [
     'prettier',
@@ -15,9 +15,11 @@ module.exports = {
     'plugin:nuxt/recommended'
   ],
   plugins: [
-    'prettier'
+    'prettier',
+    '@typescript-eslint'
   ],
   // add your custom rules here
   rules: {
+    '@typescript-eslint/no-unused-vars': 'error'
   }
 }
