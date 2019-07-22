@@ -1,0 +1,1 @@
+# nuxjs_spa_practice
