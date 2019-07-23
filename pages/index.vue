@@ -8,7 +8,7 @@
         <aside class="menu">
           <p class="menu-label">Menu</p>
           <ul class="menu-list">
-            <li><a>move to</a></li>
+            <li><nuxt-link to="/next">to next</nuxt-link></li>
           </ul>
         </aside>
       </div>
