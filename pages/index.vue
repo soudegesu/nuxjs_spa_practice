@@ -4,7 +4,7 @@
       <Monitor />
       <Menu />
     </div>
-    <Msg />
+    <Msg :message="initMsg" />
   </div>
 </template>
 
@@ -16,6 +16,11 @@ import { Vue, Component } from 'vue-property-decorator'
     Monitor: () => import('../components/Monitor.vue'),
     Menu: () => import('../components/Menu.vue'),
     Msg: () => import('../components/Msg.vue')
+  },
+  data() {
+    return {
+      initMsg: 'This message is shown when initialized'
+    }
   }
 })
 export default class Index extends Vue {}
