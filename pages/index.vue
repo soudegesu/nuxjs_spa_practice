@@ -1,49 +1,24 @@
 <template>
   <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        nuxtjs_spa_practice
-      </h1>
-      <h2 class="subtitle">
-        My groundbreaking Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+    <div class="notification">
+      This container is <strong>centered</strong> on desktop.
     </div>
+    <footer class="footer">
+      <div class="has-text-centered">
+        <p>soudegesu</p>
+      </div>
+    </footer>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import { Vue, Component } from 'vue-property-decorator'
 
-export default {
-  components: {
-    Logo
-  }
-}
+@Component
+export default class Index extends Vue {}
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
+<style scoped>
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
