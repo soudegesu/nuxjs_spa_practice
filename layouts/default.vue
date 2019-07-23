@@ -2,9 +2,7 @@
   <div>
     <div class="container">
       <div class="columns">
-        <div class="column is-four-fifths">
-          main monitor
-        </div>
+        <Monitor />
         <div class="column is-one-fifths">
           <aside class="menu">
             <p class="menu-label">Menu</p>
@@ -25,6 +23,7 @@ import { Vue, Component } from 'vue-property-decorator'
 
 @Component({
   components: {
+    Monitor: () => import('../components/Monitor.vue'),
     Msg: () => import('../components/Msg.vue')
   }
 })
