@@ -10,12 +10,15 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
+import Monitor from '../components/Monitor.vue'
+import Menu from '../components/Menu.vue'
+import Msg from '../components/Msg.vue'
 
 @Component({
   components: {
-    Monitor: () => import('../components/Monitor.vue'),
-    Menu: () => import('../components/Menu.vue'),
-    Msg: () => import('../components/Msg.vue')
+    Monitor,
+    Menu,
+    Msg
   },
   data() {
     return {
