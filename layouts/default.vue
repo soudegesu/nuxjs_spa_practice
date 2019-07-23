@@ -3,14 +3,7 @@
     <div class="container">
       <div class="columns">
         <Monitor />
-        <div class="column is-one-fifths">
-          <aside class="menu">
-            <p class="menu-label">Menu</p>
-            <ul class="menu-list">
-              <li><nuxt-link to="/next">to next</nuxt-link></li>
-            </ul>
-          </aside>
-        </div>
+        <Menu />
       </div>
       <Msg />
     </div>
@@ -24,6 +17,7 @@ import { Vue, Component } from 'vue-property-decorator'
 @Component({
   components: {
     Monitor: () => import('../components/Monitor.vue'),
+    Menu: () => import('../components/Menu.vue'),
     Msg: () => import('../components/Msg.vue')
   }
 })
