@@ -14,14 +14,19 @@
           </aside>
         </div>
       </div>
-      <div class="columns">
-        <div class="column">
-          <article class="message is-dark">
-            <div class="message-body">Message is here</div>
-          </article>
-        </div>
-      </div>
+      <Msg />
     </div>
     <nuxt />
   </div>
 </template>
+
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator'
+
+@Component({
+  components: {
+    Msg: () => import('../components/Msg.vue')
+  }
+})
+export default class Default extends Vue {}
+</script>
