@@ -1,43 +1,31 @@
 <template>
   <div class="container">
-    <div class="notification">
-      This container is <strong>centered</strong> on desktop.
-    </div>
-    <footer class="footer">
-      <div class="has-text-centered">
-        <p>soudegesu</p>
+    <div class="columns">
+      <div class="column is-four-fifths">
+        main monitor
       </div>
-    </footer>
+      <div class="column is-one-fifths">
+        <aside class="menu">
+          <p class="menu-label">Menu</p>
+          <ul class="menu-list">
+            <li><a>move to</a></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <article class="message is-dark">
+          <div class="message-body">Message is here</div>
+        </article>
+      </div>
+    </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
 
 @Component
 export default class Index extends Vue {}
 </script>
-
-<style scoped>
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
