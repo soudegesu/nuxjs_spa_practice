@@ -1,4 +1,5 @@
 import NuxtConfiguration from '@nuxt/config'
+// const environment = ;
 
 const config: NuxtConfiguration = {
   mode: 'spa',
@@ -18,6 +19,7 @@ const config: NuxtConfiguration = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
+  env: require(`./env.${process.env.NODE_ENV || 'development'}.js`),
   /*
    ** Customize the progress-bar color
    */
