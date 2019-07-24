@@ -29,9 +29,9 @@ import { Vue, Component } from 'vue-property-decorator'
   },
   methods: {
     async regist(target) {
-      window.console.log(target)
-      const ip = await this.$axios.$get('http://icanhazip.com')
-      window.console.log(ip)
+      window.console.log('Target: ' + target)
+      const users = await this.$axios.$get(process.env.apiBaseUrl + '/users')
+      window.console.log(users)
     }
   }
 })

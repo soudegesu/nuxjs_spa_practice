@@ -13,6 +13,6 @@ import { Vue, Component, Prop } from 'vue-property-decorator'
 
 @Component
 export default class Msg extends Vue {
-  @Prop({ type: String, default: '' }) readonly message: String
+  @Prop({ type: String, default: '' }) readonly message!: String
 }
 </script>
