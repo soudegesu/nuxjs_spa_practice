@@ -11,7 +11,11 @@
     "tdd": "jest --watch",
     "dev": "nuxt",
     "build": "nuxt build",
+    "build:stg": "cross-env NODE_ENV=\"staging\" nuxt build",
+    "build:prod": "cross-env NODE_ENV=\"production\" nuxt build",
     "start": "nuxt start",
+    "start:stg": "cross-env NODE_ENV=\"staging\" nuxt start",
+    "start:prod": "cross-env NODE_ENV=\"production\" nuxt start",
     "generate": "nuxt generate"
   },
   "dependencies": {
@@ -34,6 +38,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
+    "cross-env": "^5.2.0",
     "eslint": "^5.15.1",
     "eslint-config-prettier": "^4.1.0",
     "eslint-config-standard": ">=12.0.0",
