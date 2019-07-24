@@ -59,7 +59,7 @@ const config: NuxtConfiguration = {
     extend(config, ctx) { }
   },
   serverMiddleware: [
-    '~/api/index.js'
+    '~/api/index.ts'
   ]
 }
 
