@@ -6,7 +6,7 @@
     </div>
     <Msg :message="initMsg" />
     <div class="buttons are-medium">
-      <a class="button is-primary is-outlined" @click="regist('A')">A</a>
+      <a class="button is-primary is-outlined" @click="regist('A')" >A</a>
       <a class="button is-link is-outlined" @click="regist('B')">B</a>
       <a class="button is-info is-outlined" @click="regist('C')">C</a>
     </div>
@@ -22,18 +22,14 @@ import { Vue, Component } from 'vue-property-decorator'
     Menu: () => import('../components/Menu.vue'),
     Msg: () => import('../components/Msg.vue')
   },
-  data() {
-    return {
-      initMsg: 'Welcome to netx page!!'
-    }
-  },
   methods: {
-    async regist(target) {
-      window.console.log('Target: ' + target)
-      const users = await this.$axios.$get(process.env.apiBaseUrl + '/users')
-      window.console.log(users)
+    async regist() {
+      await this.$store.dispatch('save')
+      this.$router.push('/users/')
     }
   }
 })
-export default class Next extends Vue {}
+export default class Next extends Vue {
+  initMsg: string = 'Welcome to netx page!!'
+}
 </script>
