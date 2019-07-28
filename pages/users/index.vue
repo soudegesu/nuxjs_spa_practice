@@ -3,7 +3,6 @@
     <div v-for="user in users" :key="user">
       name: {{ user }}
     </div>
-    </div>
   </div>
 </template>
 
@@ -18,7 +17,6 @@ import { Users } from '@/store/users/index'
   }
 })
 export default class Last extends Vue {
-
   @Users.Getter('all')
   private users!: string[];
 }

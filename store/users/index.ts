@@ -1,8 +1,14 @@
 import { Module, MutationTree, ActionTree, GetterTree } from 'vuex';
 import { RootState } from '@/store/types';
 
+export const userModuleName = 'userModule';
+
 interface UserState {
   users: Array<string>;
+}
+
+export interface UserStateMaps {
+  [userModuleName]: UserState;
 }
 
 const state: UserState = {
@@ -30,8 +36,8 @@ const actions: ActionTree<UserState, RootState> = {
 
 export const Users: Module<UserState, RootState> = {
   namespaced: true,
-  state: state,
-  getters: getters,
+  state: () => state,
+  getters: () => getters,
   actions: actions,
   mutations: mutations,
 };
