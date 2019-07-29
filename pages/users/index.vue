@@ -8,7 +8,8 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import { Users } from '@/store/users/index'
+// import { userModule } from '@/store/modules/user'
+
 @Component({
   components: {
     Monitor: () => import('@/components/Monitor.vue'),
@@ -16,10 +17,7 @@ import { Users } from '@/store/users/index'
     Msg: () => import('@/components/Msg.vue')
   }
 })
-export default class Last extends Vue {
-  @Users.Getter('all')
-  private users!: string[];
-}
+export default class Last extends Vue {}
 
 </script>
 

@@ -59,6 +59,7 @@
     "nodemon": "^1.18.9",
     "prettier": "^1.16.4",
     "ts-jest": "^24.0.2",
-    "vue-jest": "^3.0.3"
+    "vue-jest": "^3.0.3",
+    "vuex-module-decorators": "^0.9.9"
   }
 }
