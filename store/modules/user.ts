@@ -10,7 +10,7 @@ class UserModule extends VuexModule implements UserState {
 
   users: Array<string> = [];
 
-  public get all(): Array<string> {
+  get all(): Array<string> {
     return this.users;
   }
 

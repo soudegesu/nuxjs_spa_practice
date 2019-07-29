@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div v-for="user in users" :key="user">
+    hogehogehoge
+    <div v-for="user in this.users()" :key="user">
       name: {{ user }}
     </div>
   </div>
@@ -8,7 +9,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-// import { userModule } from '@/store/modules/user'
+import { userModule } from '@/store/modules/user'
 
 @Component({
   components: {
@@ -17,7 +18,11 @@ import { Vue, Component } from 'vue-property-decorator'
     Msg: () => import('@/components/Msg.vue')
   }
 })
-export default class Last extends Vue {}
+export default class Last extends Vue {
+  get users(): Array<string> {
+    return userModule.all
+  }
+}
 
 </script>
 

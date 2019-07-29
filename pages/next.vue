@@ -30,6 +30,7 @@ export default class Next extends Vue {
   public async regist(value) {
     window.console.log(value)
     await userModule.save()
+    window.console.log('router push')
     this.$router.push('/users/')
   }
 }
