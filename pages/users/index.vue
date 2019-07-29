@@ -1,7 +1,6 @@
 <template>
   <div>
-    hogehogehoge
-    <div v-for="user in this.users()" :key="user">
+    <div v-for="user in users" :key="user">
       name: {{ user }}
     </div>
   </div>
