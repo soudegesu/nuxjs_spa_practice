@@ -55,6 +55,7 @@
     "eslint-plugin-standard": ">=4.0.0",
     "eslint-plugin-vue": "^5.2.2",
     "express": "^4.17.1",
+    "express-generator": "^4.16.1",
     "jest": "^24.1.0",
     "nodemon": "^1.18.9",
     "prettier": "^1.16.4",
