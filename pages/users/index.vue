@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div v-for="user in users" :key="user">
-      name: {{ user }}
+    <div v-for="(user, index) in users" v-bind:key="index">
+      name: {{ user.name }}
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import { userModule } from '@/store/modules/user'
+import { userModule, User } from '@/store/modules/user'
 
 @Component({
   components: {
@@ -18,7 +18,7 @@ import { userModule } from '@/store/modules/user'
   }
 })
 export default class Last extends Vue {
-  get users(): Array<string> {
+  get users(): Array<User> {
     return userModule.all
   }
 }

@@ -1,30 +1,33 @@
 import { VuexModule, Module, Action, Mutation, getModule,} from 'vuex-module-decorators';
 import store from "@/store/store"
+import axios from 'axios';
 
-export interface UserState {
-  users: Array<string>;
+export interface User {
+  name: string
+}
+
+interface UserState {
+  users: Array<User>;
 }
 
 @Module({ dynamic: true, store, namespaced: true, name: 'user'})
 class UserModule extends VuexModule implements UserState {
 
-  users: Array<string> = [];
+  users: Array<User> = [];
 
-  get all(): Array<string> {
+  get all(): Array<User> {
     return this.users;
   }
 
   @Mutation
-  public setUser(users: Array<string>): void {
+  updateUser(users: Array<User>): void {
     this.users = users
   }
 
   @Action({})
-  async save() {
-    // window.console.log(value)
-    // const users = await this.context.$axios.$get(process.env.apiBaseUrl + '/users')
-    const users = ['aaaaaaaaa', 'bbbbbbbbbbb']
-    this.setUser(users)
+  async save() {    
+    const users = await axios.get<Array<User>>(process.env.apiBaseUrl + '/users')
+    this.updateUser(users.data)
   }
 }
 
