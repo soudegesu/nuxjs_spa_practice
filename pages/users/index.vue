@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div v-for="user in users" :key="user">
-      name: {{ user }}
-    </div>
+    <div v-for="user in users" :key="user">name: {{ user }}</div>
   </div>
 </template>
 
@@ -18,12 +16,10 @@ import { userModule } from '@/store/modules/user'
   }
 })
 export default class Last extends Vue {
-  get users(): Array<string> {
+  get users(): string[] {
     return userModule.all
   }
 }
-
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

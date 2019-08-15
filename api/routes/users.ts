@@ -1,18 +1,14 @@
-import * as Express from 'express';
+import * as Express from 'express'
 
-const router = Express.Router();
+const router = Express.Router()
 
 // Mock Users
-const users = [
-  { name: 'Alexandre' },
-  { name: 'Pooya' },
-  { name: 'Sébastien' }
-];
+const users = [{ name: 'Alexandre' }, { name: 'Pooya' }, { name: 'Sébastien' }]
 
 /* GET users listing. */
 router.get('/users', (req, res, next) => {
   res.json(users)
-});
+})
 
 /* GET user by ID. */
 router.get('/users/:id', (req, res, next) => {
@@ -22,6 +18,6 @@ router.get('/users/:id', (req, res, next) => {
   } else {
     res.sendStatus(404)
   }
-});
+})
 
-export default router;
+export default router

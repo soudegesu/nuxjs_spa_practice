@@ -14,7 +14,6 @@ import { Component, Vue } from 'vue-property-decorator'
 export default class Logo extends Vue {}
 </script>
 
-
 <style>
 .VueToNuxtLogo {
   display: inline-block;

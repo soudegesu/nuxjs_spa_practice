@@ -1,7 +1,7 @@
-import express from 'express';
-import users from './routes/users';
+import express from 'express'
+import users from './routes/users'
 
-const app = express();
+const app = express()
 
 // Import API Routes
 app.use(users)
@@ -12,4 +12,4 @@ module.exports = {
   handler: app
 }
 
-export default app;
+export default app

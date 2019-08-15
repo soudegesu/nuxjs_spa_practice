@@ -1,5 +1,4 @@
 import NuxtConfiguration from '@nuxt/config'
-// const environment = ;
 
 const config: NuxtConfiguration = {
   mode: 'spa',
@@ -58,11 +57,9 @@ const config: NuxtConfiguration = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) { }
+    extend(config, ctx) {}
   },
-  serverMiddleware: [
-    '~/api/index.ts'
-  ]
+  serverMiddleware: ['~/api/index.ts']
 }
 
-export default config;
+export default config
